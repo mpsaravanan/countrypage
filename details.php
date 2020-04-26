@@ -1,7 +1,7 @@
 <?php
 function curlPostRequest($endpoint, $data)
 {
-    $token = 'eyJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJwcmF0aWsiLCJzdWIiOiJwcmF0aWsiLCJpc3MiOiJLYW5pbmlTb2Z0VGVjaCIsImV4cCI6MTU4Nzg5MzUyMiwiaWF0IjoxNTg3ODc1NTIyfQ.8DfWJWckiIbh5XwRVj2Z6xmwby6OubyRlfC_YXEzyPiLiFpyQh4gTBO5wjI6zn0rVHrl6D7JEWpsi2UAmRAZwQ';
+    $token = 'eyJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJwcmF0aWsiLCJzdWIiOiJwcmF0aWsiLCJpc3MiOiJLYW5pbmlTb2Z0VGVjaCIsImV4cCI6MTU4NzkzMDQ2NSwiaWF0IjoxNTg3OTEyNDY1fQ.jJ8yhAh6P5fTIrvo2e1h2ZjsrSxd7kIvWXu-wV_L8ScHicZyCnb1Wr8pLKWtbMdGh90gyW0lsTUHB1akPyztGw';
     $ch = curl_init($endpoint);
     $post = json_encode($data);
     $authorization = "Authorization: Bearer " . $token;
@@ -17,7 +17,7 @@ function curlPostRequest($endpoint, $data)
 
 function curlGetRequest($endpoint)
 {
-    $token = 'eyJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJwcmF0aWsiLCJzdWIiOiJwcmF0aWsiLCJpc3MiOiJLYW5pbmlTb2Z0VGVjaCIsImV4cCI6MTU4Nzg5MzUyMiwiaWF0IjoxNTg3ODc1NTIyfQ.8DfWJWckiIbh5XwRVj2Z6xmwby6OubyRlfC_YXEzyPiLiFpyQh4gTBO5wjI6zn0rVHrl6D7JEWpsi2UAmRAZwQ';
+    $token = 'eyJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJwcmF0aWsiLCJzdWIiOiJwcmF0aWsiLCJpc3MiOiJLYW5pbmlTb2Z0VGVjaCIsImV4cCI6MTU4NzkzMDQ2NSwiaWF0IjoxNTg3OTEyNDY1fQ.jJ8yhAh6P5fTIrvo2e1h2ZjsrSxd7kIvWXu-wV_L8ScHicZyCnb1Wr8pLKWtbMdGh90gyW0lsTUHB1akPyztGw';
     $ch = curl_init();
     $authorization = "Authorization: Bearer " . $token;
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', $authorization));
