@@ -138,7 +138,7 @@
             var longitude = $("#add #longitude").val();
             if (countryname != '' && latitude != '' && longitude != '') {
                 $.ajax({
-                    url: '/details.php',
+                    url: window.location.href + 'details.php',
                     type: "POST",
                     data: {
                         'countryname': countryname,
@@ -175,7 +175,7 @@
             var rowId = $("#edit #rowId").val();
             if (countryname != '' && latitude != '' && longitude != '') {
                 $.ajax({
-                    url: '/details.php',
+                    url: window.location.href + 'details.php',
                     type: "POST",
                     data: {
                         'rowId': rowId,
@@ -201,7 +201,7 @@
         function deleteDetail(elem) {
             if (confirm('Are you sure you want to delete this record?')) {
                 $.ajax({
-                    url: '/details.php',
+                    url: window.location.href + 'details.php',
                     type: "POST",
                     data: {
                         'rowId': elem,
@@ -227,7 +227,7 @@
             });
             if (confirm('Are you sure you want to delete this records?')) {
                 $.ajax({
-                    url: '/details.php',
+                    url: window.location.href + 'details.php',
                     type: "POST",
                     data: {
                         'rowIds': JSON.stringify(listval),
