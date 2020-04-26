@@ -247,7 +247,7 @@
 
         function showDetail() {
             $.ajax({
-                url: '/details.php?type=show',
+                url: window.location.href + 'details.php?type=show',
                 type: "GET",
                 success: function(resp) {
                     myHTML = '';
