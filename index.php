@@ -256,12 +256,12 @@
                         for (var i = 0; i < resp.length; i++) {
                             myHTML += '<tr>';
                             myHTML += '<td> <input type = "checkbox" name="checkbox" class = "checkbox" value="' + resp[i].rowId + '" /> </td>';
-                            myHTML += '<td>' + resp[i].name + '</td>';
+                            myHTML += '<td style="color: #f0ad4e;">' + resp[i].name + '</td>';
                             myHTML += '<td>' + resp[i].latitude + '</td>';
                             myHTML += '<td>' + resp[i].longitude + '</td>';
                             myHTML += '<td>';
-                            myHTML += '<p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" onclick="updateDetail(\'' + resp[i].rowId + '\', \'' + resp[i].name + '\', \'' + resp[i].latitude + '\', \'' + resp[i].longitude + '\');"><span class="glyphicon glyphicon-pencil"></span></button></p>';
-                            myHTML += '<p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" onclick="deleteDetail(\'' + resp[i].rowId + '\');"><span class="glyphicon glyphicon-trash"></span></button></p>';
+                            myHTML += '<p data-placement="top" data-toggle="tooltip" title="Edit" style="float: left;margin:10px;"><button class="btn btn-primary btn-xs" data-title="Edit" onclick="updateDetail(\'' + resp[i].rowId + '\', \'' + resp[i].name + '\', \'' + resp[i].latitude + '\', \'' + resp[i].longitude + '\');"><span class="glyphicon glyphicon-pencil"></span></button></p>';
+                            myHTML += '<p data-placement="top" data-toggle="tooltip" title="Delete" style="float: left;margin:10px;"><button class="btn btn-danger btn-xs" data-title="Delete" onclick="deleteDetail(\'' + resp[i].rowId + '\');"><span class="glyphicon glyphicon-trash"></span></button></p>';
                             myHTML += '</td>';
                             myHTML += '<tr>';
                         }
